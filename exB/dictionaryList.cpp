@@ -168,9 +168,19 @@ void DictionaryList::make_empty()
 
 void DictionaryList::find(const Key& keyA)
 {
-  cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
-  cout << "... so exit is being called.\n";
-  exit(1);
+  //key == int 
+  //datum == string
+  // cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
+  // cout << "... so exit is being called.\n";
+  
+  go_to_first();
+  while(cursor_ok()){
+  cout << cursor_key();
+    if (cursor_key() == keyA){
+      break;
+    }
+    step_fwd();
+  }  
 }
 
 
