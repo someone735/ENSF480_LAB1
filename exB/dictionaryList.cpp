@@ -195,9 +195,18 @@ void DictionaryList::destroy()
 void DictionaryList::copy(const DictionaryList& source)
 {
   
-  cout << "\nDictionaryList::copy is not implemented properly,\n"
-       << "so the program is calling exit.\n";
-  exit(1);
+  go_to_first();
+
+  cout << source.cursor_ok();
+  if (source.cursor_ok()){
+    insert(source.cursor_key(), source.cursor_datum());
+  }
+  
+  
+  
+  // cout << "\nDictionaryList::copy is not implemented properly,\n"
+  //      << "so the program is calling exit.\n";
+  // exit(1);
 }
 
 
