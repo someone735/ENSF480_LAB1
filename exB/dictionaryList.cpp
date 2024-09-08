@@ -194,15 +194,18 @@ void DictionaryList::destroy()
 
 void DictionaryList::copy(const DictionaryList& source)
 {
-  
-  go_to_first();
-
-  cout << source.cursor_ok();
-  if (source.cursor_ok()){
-    insert(source.cursor_key(), source.cursor_datum());
+  headM = 0;
+  this->headM = source.headM;
+  for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
+    this -> insert(temp -> keyM, temp -> datumM);
   }
-  
-  
+  if (source.cursor_ok()){
+      find(source.cursorM -> keyM);
+  } else {
+    this -> cursorM = 0;
+  }
+
+
   
   // cout << "\nDictionaryList::copy is not implemented properly,\n"
   //      << "so the program is calling exit.\n";
