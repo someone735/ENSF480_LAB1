@@ -97,6 +97,7 @@ void test_copying()
   // Assignment operator check.
   one = two = three = three;
   one.remove(319);
+  cout << "temp";
   two.remove(315);
   
   cout << "Printing list--keys should be 315, 335\n";

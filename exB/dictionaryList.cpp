@@ -173,22 +173,32 @@ void DictionaryList::find(const Key& keyA)
   // cout << "\nDon't know how to find " << keyA << " (or any other key).\n";
   // cout << "... so exit is being called.\n";
   
-  go_to_first();
-  while(cursor_ok()){
-  cout << cursor_key();
-    if (cursor_key() == keyA){
+  Node* temp = this ->  headM;
+  int found = 0;
+  while (temp != 0){
+    if (temp ->keyM == keyA){
+      cursorM = temp;
+      found = 1;
       break;
-    }
-    step_fwd();
-  }  
+    } 
+      temp = temp ->nextM;
+  }
+  if (!found){
+    cursorM = 0;
+  }
 }
 
 
 void DictionaryList::destroy()
 {
-  cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
-       << "when it should be deleting them!\n";
-  headM = 0;
+  // cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
+  //      << "when it should be deleting them!\n";
+  while (headM !=0){
+    Node* temp = headM;
+    headM = headM -> nextM;
+    delete temp;
+  }
+
 }
 
 
@@ -199,17 +209,17 @@ void DictionaryList::copy(const DictionaryList& source)
   for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
     this -> insert(temp -> keyM, temp -> datumM);
   }
-  if (source.cursor_ok()){
-      find(source.cursorM -> keyM);
+  if (source.cursorM != 0 ){
+    this -> find(source.cursorM -> keyM);
   } else {
     this -> cursorM = 0;
   }
-
-
-  
-  // cout << "\nDictionaryList::copy is not implemented properly,\n"
-  //      << "so the program is calling exit.\n";
-  // exit(1);
+  return;
+  // go_to_first();
+  // while(cursor_ok()){
+    
+  //   step_fwd();
+  // }
 }
 
 
