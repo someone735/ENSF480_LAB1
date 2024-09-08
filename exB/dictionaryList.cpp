@@ -193,10 +193,11 @@ void DictionaryList::destroy()
 {
   // cout << "\nWARNING: DictionaryList::destroy() is abandoning nodes\n"
   //      << "when it should be deleting them!\n";
-  while (headM !=0){
-    Node* temp = headM;
-    headM = headM -> nextM;
-    delete temp;
+  go_to_first();
+  while(cursorM != 0){
+    Node* temp = cursorM;
+    cursorM = cursorM->nextM;
+    remove(temp->keyM);
   }
 
 }
@@ -205,21 +206,16 @@ void DictionaryList::destroy()
 void DictionaryList::copy(const DictionaryList& source)
 {
   headM = 0;
-  this->headM = source.headM;
+  this->sizeM = source.sizeM;
   for (Node* temp = source.headM; temp != 0; temp = temp->nextM){
     this -> insert(temp -> keyM, temp -> datumM);
   }
   if (source.cursorM != 0 ){
-    this -> find(source.cursorM -> keyM);
+    find(source.cursorM -> keyM);
   } else {
     this -> cursorM = 0;
   }
-  return;
-  // go_to_first();
-  // while(cursor_ok()){
-    
-  //   step_fwd();
-  // }
+  
 }
 
 
