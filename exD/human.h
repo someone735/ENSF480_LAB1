@@ -3,14 +3,15 @@
 #ifndef POINT_H
 #define POINT_H
 
-
 class Human {
 private:
     Point location;
     char *name;
 
 public: 
-    Human(const char* nam, const double x, const double y);
+    Human();
+
+    Human(const char* nam, const double x, const double y): name(new char [strlen(nam)+1]);
 
     char* get_name() const;
 
