@@ -1,4 +1,6 @@
 #include "point.h"
+#include <cstring>
+#include <iostream>
 
 #ifndef HUMAN_H
 #define HUMAN_H
