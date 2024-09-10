@@ -1,7 +1,7 @@
 #include "point.h"
 
-#ifndef POINT_H
-#define POINT_H
+#ifndef HUMAN_H
+#define HUMAN_H
 
 class Human {
 private:
@@ -11,11 +11,11 @@ private:
 public: 
     Human();
 
-    Human(const char* nam, const double x, const double y): name(new char [strlen(nam)+1]);
+    Human(const char* nam, const double x, const double y): name(new char [strlen(nam)+1]){};
 
     char* get_name() const;
 
-    void set_name(const char* name);
+    void set_name(const char* nam);
 
     Point get_point() const;
 
