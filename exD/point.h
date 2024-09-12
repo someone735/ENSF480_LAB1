@@ -1,3 +1,11 @@
+/*
+File name: point.h
+Assignment: Lab 1 Excerise D
+Completed by: John Tumacder 
+Submission date: Sept ___, 2024
+*/
+
+
 #ifndef POINT_H
 #define POINT_H
 

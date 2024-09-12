@@ -1,3 +1,11 @@
+/*
+File name: company.cpp
+Assignment: Lab 1 Excerise C
+Completed by: John Tumacder 
+Submission date: Sept ___, 2024
+*/
+
+
 #include <vector>
 #include <string>
 

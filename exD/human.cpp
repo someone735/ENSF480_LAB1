@@ -1,3 +1,10 @@
+/*
+File name: human.cpp
+Assignment: Lab 1 Excerise D
+Completed by: John Tumacder 
+Submission date: Sept ___, 2024
+*/
+
 #include "human.h"
 #include "point.h"
 
