@@ -19,9 +19,7 @@ int main(void)
 
     x[0].set_str("ENEL");
     x[1].set_str("0");
-    cout<<"here";
     Mystring* z = new Mystring("4");
-    cout<<"here";
       
     x[0].append(*z).append(x[1]);
   
