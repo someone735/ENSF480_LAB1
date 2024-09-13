@@ -2,7 +2,7 @@
 File name: human.h
 Assignment: Lab 1 Excerise D
 Completed by: John Tumacder 
-Submission date: Sept ___, 2024
+Submission date: Sept 13, 2024
 */
 
 #include "point.h"

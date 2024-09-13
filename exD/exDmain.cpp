@@ -1,3 +1,10 @@
+/*
+File name: exDmain.cpp
+Assignment: Lab 1 Excerise D
+Completed by: John Tumacder 
+Submission date: Sept 13, 2024
+*/
+
 #include "human.h"
 #include "iostream"
 
