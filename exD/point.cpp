@@ -2,7 +2,7 @@
 File name: point.cpp
 Assignment: Lab 1 Excerise B
 Completed by: John Tumacder 
-Submission date: Sept ___, 2024
+Submission date: Sept 13, 2024
 */
 
 #include "point.h"

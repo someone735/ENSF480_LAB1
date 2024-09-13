@@ -2,7 +2,7 @@
 
 // Lab 1 - Exercise A
  
-// Completed by:
+// Completed by: John Tumacder
 
 #include <assert.h>
 #include <iostream>
